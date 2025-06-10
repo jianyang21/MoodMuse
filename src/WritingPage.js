@@ -12,22 +12,27 @@ const WritingPage = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:3001/post-entry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content }),
-      });
+      // Use localStorage for now instead of backend API
+      const storedEntries = localStorage.getItem("moodmuse-entries");
+      const entries = storedEntries ? JSON.parse(storedEntries) : [];
 
-      if (res.ok) {
-        setContent("");
-        setStatus("✅ Entry posted successfully!");
-      } else {
-        const errorData = await res.json();
-        setStatus(`❌ Failed to post: ${errorData.error || "Unknown error"}`);
-      }
+      const newEntry = {
+        _id: Date.now().toString(),
+        content: content.trim(),
+        createdAt: new Date().toISOString(),
+      };
+
+      entries.unshift(newEntry); // Add to beginning for newest first
+      localStorage.setItem("moodmuse-entries", JSON.stringify(entries));
+
+      setContent("");
+      setStatus("✅ Entry posted successfully!");
+
+      // Clear status after 3 seconds
+      setTimeout(() => setStatus(""), 3000);
     } catch (err) {
       console.error(err);
-      setStatus("❌ Server error while posting.");
+      setStatus("❌ Error saving entry.");
     }
   };
 

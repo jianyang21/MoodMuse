@@ -9,20 +9,17 @@ const DiaryPage = () => {
   const fetchEntries = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3001/get-entries");
-
-      if (response.ok) {
-        const data = await response.json();
-        setEntries(data.entries || []);
+      // Use localStorage for now instead of backend API
+      const storedEntries = localStorage.getItem("moodmuse-entries");
+      if (storedEntries) {
+        const entries = JSON.parse(storedEntries);
+        setEntries(entries || []);
       } else {
-        const errorData = await response.json();
-        setError(
-          `Failed to load entries: ${errorData.error || "Unknown error"}`,
-        );
+        setEntries([]);
       }
     } catch (err) {
       console.error("Error fetching entries:", err);
-      setError("Unable to connect to server. Please try again later.");
+      setError("Unable to load entries from storage.");
     } finally {
       setLoading(false);
     }
