@@ -156,3 +156,75 @@
   background-color: #ffcdd2;
   color: #b71c1c;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .buttons {
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin: 15px 0;
+    order: 3;
+  }
+
+  .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin: 15px auto;
+    order: 1;
+  }
+
+  .navbar {
+    order: 2;
+    position: relative;
+    top: auto;
+    margin: 0;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .welcome {
+    margin-top: 20px !important;
+    order: 4;
+  }
+
+  .user-section {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .welcome-user {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navbar li a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .mood-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mood-buttons button {
+    width: 200px;
+    padding: 15px 25px;
+  }
+}
