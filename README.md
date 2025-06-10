@@ -15,12 +15,12 @@ MoodMuse is a web application designed to help users track their mood and expres
 
 ##  Features
 
-- ✍️ **Online Mood Journal** – Write and save daily or momentary thoughts
-- 😊 **Mood Tracker** – Log your current mood with emotion tags or emojis
-- 📈 **Mood History** – View past entries and see how your emotions change over time
-- 🔒 **User Authentication** – Register and login securely to protect your data
-- 🕶️ **Private & Secure** – Your entries are only visible to you
-- 🌙 **Dark Mode (Optional)** – For a more soothing journaling experience
+-  **Online Mood Journal** – Write and save daily or momentary thoughts
+-  **Mood Tracker** – Log your current mood with emotion tags or emojis
+-  **Mood History** – View past entries and see how your emotions change over time
+-  **User Authentication** – Register and login securely to protect your data
+-  **Private & Secure** – Your entries are only visible to you
+-  **Dark Mode (Optional)** – For a more soothing journaling experience
 
 ---
 
