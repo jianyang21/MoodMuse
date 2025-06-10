@@ -15,7 +15,29 @@ const DiaryPage = () => {
         const entries = JSON.parse(storedEntries);
         setEntries(entries || []);
       } else {
-        setEntries([]);
+        // Add some demo entries if none exist
+        const demoEntries = [
+          {
+            _id: "demo1",
+            content:
+              "Today was a great day! I felt really accomplished after finishing my project.",
+            createdAt: new Date(Date.now() - 86400000).toISOString(), // 1 day ago
+          },
+          {
+            _id: "demo2",
+            content:
+              "Feeling a bit overwhelmed with work lately, but I know it will get better.",
+            createdAt: new Date(Date.now() - 172800000).toISOString(), // 2 days ago
+          },
+          {
+            _id: "demo3",
+            content:
+              "Had a wonderful time with friends today. Grateful for the people in my life.",
+            createdAt: new Date(Date.now() - 259200000).toISOString(), // 3 days ago
+          },
+        ];
+        localStorage.setItem("moodmuse-entries", JSON.stringify(demoEntries));
+        setEntries(demoEntries);
       }
     } catch (err) {
       console.error("Error fetching entries:", err);
