@@ -30,6 +30,21 @@ function AppContent() {
     navigate("/");
   };
 
+  const handleMoodClick = (mood) => {
+    // Save mood to localStorage
+    const today = new Date().toISOString().split("T")[0];
+    const moodData = {
+      mood,
+      date: today,
+      timestamp: new Date().toISOString(),
+    };
+
+    localStorage.setItem("moodmuse-daily-mood", JSON.stringify(moodData));
+
+    // Navigate to writing page to encourage journaling
+    navigate("/writing");
+  };
+
   return (
     <div
       className="App"
@@ -120,15 +135,24 @@ function AppContent() {
                   <p className="mood-question">How are you feeling today?</p>
 
                   <div className="mood-buttons">
-                    <button className="mood-btn happy">
+                    <button
+                      className="mood-btn happy"
+                      onClick={() => handleMoodClick("happy")}
+                    >
                       <span className="emoji">😊</span>
                       <span className="label">Happy</span>
                     </button>
-                    <button className="mood-btn meh">
+                    <button
+                      className="mood-btn meh"
+                      onClick={() => handleMoodClick("meh")}
+                    >
                       <span className="emoji">😐</span>
                       <span className="label">Meh</span>
                     </button>
-                    <button className="mood-btn sad">
+                    <button
+                      className="mood-btn sad"
+                      onClick={() => handleMoodClick("sad")}
+                    >
                       <span className="emoji">😢</span>
                       <span className="label">Sad</span>
                     </button>
