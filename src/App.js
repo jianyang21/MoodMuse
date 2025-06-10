@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import logoBackground from "../wmremove-transformed.jpeg";
-import moodMuseLogo from "../moodmuse-logo.png";
+// Using public folder for static images
+const logoBackground = "/wmremove-transformed.jpeg";
+const moodMuseLogo = "/moodmuse-logo.png";
 import WritingPage from "./WritingPage";
 import DiaryPage from "./DiaryPage";
 import "./App.css";
