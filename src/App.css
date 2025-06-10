@@ -110,51 +110,272 @@
   opacity: 0.5;
 }
 
-/* Welcome Section */
-.welcome {
+/* Homepage Styles */
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 200px;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
-.welcome h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+/* Animated Centerpiece */
+.animated-centerpiece {
+  position: relative;
+  margin-bottom: 40px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.welcome p {
-  color: #ccc;
+.breathing-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: breathe 4s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
-/* Mood Buttons */
+.inner-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: breathe 4s ease-in-out infinite reverse;
+}
+
+.pulse-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0.7));
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Floating Elements */
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.float-particle {
+  position: absolute;
+  font-size: 24px;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.particle-1 {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.particle-3 {
+  bottom: 25%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.particle-4 {
+  bottom: 15%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+.particle-5 {
+  top: 50%;
+  left: 5%;
+  animation-delay: 4s;
+}
+
+.particle-6 {
+  top: 60%;
+  right: 5%;
+  animation-delay: 5s;
+}
+
+/* Welcome Content */
+.welcome-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(45deg, #fff, #e3f2fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.mood-question {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Enhanced Mood Buttons */
 .mood-buttons {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.mood-buttons button {
-  padding: 10px 25px;
-  border-radius: 999px;
-  font-size: 16px;
+.mood-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 25px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+  min-width: 100px;
 }
 
-/* Mood Variants */
-.happy {
-  background-color: #fff9c4;
+.mood-btn .emoji {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.mood-btn .label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.mood-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.mood-btn:hover .emoji {
+  transform: scale(1.2);
+}
+
+/* Mood Button Variants */
+.mood-btn.happy {
+  background: linear-gradient(135deg, #fff9c4, #f9e79f);
   color: #f57f17;
 }
 
-.meh {
-  background-color: #bbdefb;
+.mood-btn.meh {
+  background: linear-gradient(135deg, #bbdefb, #90caf9);
   color: #0d47a1;
 }
 
-.sad {
-  background-color: #ffcdd2;
+.mood-btn.sad {
+  background: linear-gradient(135deg, #ffcdd2, #f8bbd9);
   color: #b71c1c;
+}
+
+/* Animations */
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.8;
+  }
+  33% {
+    transform: translateY(-20px) rotate(120deg);
+    opacity: 1;
+  }
+  66% {
+    transform: translateY(10px) rotate(240deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
 }
 
 /* Responsive design */
@@ -190,9 +411,51 @@
     padding: 10px;
   }
 
-  .welcome {
-    margin-top: 20px !important;
+  .homepage {
+    padding: 10px;
+    margin-top: 20px;
     order: 4;
+  }
+
+  .animated-centerpiece {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 30px;
+  }
+
+  .breathing-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .inner-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .welcome-content {
+    padding: 25px 20px;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .mood-buttons {
+    gap: 15px;
+  }
+
+  .mood-btn {
+    padding: 15px 20px;
+    min-width: 80px;
+  }
+
+  .float-particle {
+    font-size: 20px;
   }
 
   .user-section {
@@ -218,13 +481,45 @@
     padding: 6px 10px;
   }
 
+  .animated-centerpiece {
+    width: 200px;
+    height: 200px;
+  }
+
+  .breathing-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .inner-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
   .mood-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 12px;
   }
 
-  .mood-buttons button {
-    width: 200px;
-    padding: 15px 25px;
+  .mood-btn {
+    width: 180px;
+    padding: 15px 20px;
+  }
+
+  .welcome-content {
+    padding: 20px 15px;
+  }
+
+  .float-particle {
+    font-size: 16px;
   }
 }

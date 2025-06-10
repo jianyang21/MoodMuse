@@ -90,17 +90,50 @@ function AppContent() {
         <Route
           path="/"
           element={
-            <div className="welcome">
-              <h1>
-                {isAuthenticated
-                  ? `Welcome back, ${user?.firstName || user?.name}!`
-                  : "Welcome back!"}
-              </h1>
-              <p>How are you feeling today?</p>
-              <div className="mood-buttons">
-                <button className="happy">😊 Happy</button>
-                <button className="meh">😐 Meh</button>
-                <button className="sad">😢 Sad</button>
+            <div className="homepage">
+              <div className="hero-section">
+                <div className="animated-centerpiece">
+                  <div className="breathing-circle">
+                    <div className="inner-circle">
+                      <div className="pulse-dot"></div>
+                    </div>
+                  </div>
+                  <div className="floating-elements">
+                    <div className="float-particle particle-1">✨</div>
+                    <div className="float-particle particle-2">🌙</div>
+                    <div className="float-particle particle-3">💫</div>
+                    <div className="float-particle particle-4">🌟</div>
+                    <div className="float-particle particle-5">☁️</div>
+                    <div className="float-particle particle-6">🦋</div>
+                  </div>
+                </div>
+
+                <div className="welcome-content">
+                  <h1 className="main-title">
+                    {isAuthenticated
+                      ? `Welcome back, ${user?.firstName || user?.name}!`
+                      : "Welcome to MoodMuse"}
+                  </h1>
+                  <p className="subtitle">
+                    Your personal space for mindful reflection
+                  </p>
+                  <p className="mood-question">How are you feeling today?</p>
+
+                  <div className="mood-buttons">
+                    <button className="mood-btn happy">
+                      <span className="emoji">😊</span>
+                      <span className="label">Happy</span>
+                    </button>
+                    <button className="mood-btn meh">
+                      <span className="emoji">😐</span>
+                      <span className="label">Meh</span>
+                    </button>
+                    <button className="mood-btn sad">
+                      <span className="emoji">😢</span>
+                      <span className="label">Sad</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           }
