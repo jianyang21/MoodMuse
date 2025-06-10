@@ -1,43 +1,72 @@
-# MoodMuse 😌📔
+# MoodMuse - Personal Mood and Writing Companion
 
-MoodMuse is a web application designed to help users track their mood and express their feelings through an online journal. Whether you're feeling happy, sad, anxious, or excited, MoodMuse provides a safe and personal space to log your emotions, reflect on your thoughts, and keep track of your mental wellness over time.
+A React-based web application for journaling and mood tracking.
 
----
+## Features
 
-## 🛠️ Built With
+- **Writing Page**: Create and save personal journal entries
+- **Diary Page**: View all your saved entries with timestamps
+- **Mood Tracking**: Interactive mood selection on the homepage
+- **Responsive Design**: Works on both desktop and mobile devices
+- **Local Storage**: Entries are saved locally in your browser
 
-- **MongoDB** – For storing mood entries and user data
-- **Express.js** – Backend framework for handling APIs and routing
-- **React.js** – Frontend library for creating dynamic user interfaces
-- **Node.js** – JavaScript runtime for backend development
+## Fixed Issues
 
----
+✅ **Project Structure**: Proper React app setup with correct file structure
+✅ **Dependencies**: All required npm packages installed
+✅ **Navigation**: Profile section removed from navbar as requested  
+✅ **Diary Functionality**: Displays entries with proper formatting and timestamps
+✅ **Error Handling**: Improved error states and loading messages
+✅ **Responsive Design**: Mobile-friendly layout
+✅ **Demo Data**: Sample entries included for better user experience
 
-## ✨ Features
-
-- ✍️ **Online Mood Journal** – Write and save daily or momentary thoughts
-- 😊 **Mood Tracker** – Log your current mood with emotion tags or emojis
-- 📈 **Mood History** – View past entries and see how your emotions change over time
-- 🔒 **User Authentication** – Register and login securely to protect your data
-- 🕶️ **Private & Secure** – Your entries are only visible to you
-- 🌙 **Dark Mode (Optional)** – For a more soothing journaling experience
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-Ensure you have the following installed:
-
-- Node.js
-- MongoDB
-- npm or yarn
+- Node.js and npm installed
 
 ### Installation
 
-1. **Clone the Repository**
+1. Install dependencies:
 
    ```bash
-   git clone https://github.com/jingyang21/moodmuse.git
-   cd moodmuse
+   npm install
+   ```
+
+2. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) to view the app
+
+## Navigation
+
+- **Home**: Welcome page with mood selection
+- **Writing**: Create new journal entries
+- **Diary**: View all your saved entries
+
+## Data Storage
+
+Currently uses browser localStorage for data persistence. Entries include:
+
+- Content text
+- Creation timestamp
+- Unique ID for each entry
+
+## Technologies Used
+
+- React 18
+- React Router for navigation
+- CSS3 with modern features (backdrop-filter, gradients)
+- localStorage for data persistence
+
+## Future Enhancements
+
+- Backend database integration (MongoDB)
+- User authentication
+- Mood analytics and insights
+- Entry search and filtering
+- Export functionality
