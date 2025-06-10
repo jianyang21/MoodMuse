@@ -21,6 +21,7 @@
   position: relative;
   z-index: 10;
   margin: 20px 0;
+  overflow: hidden;
 }
 
 .signup-header {
@@ -55,12 +56,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  width: 100%;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
+  position: relative;
 }
 
 .form-group label {
@@ -78,6 +82,11 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 
 .form-group input::placeholder {
@@ -292,7 +301,7 @@
 
 /* Background floating elements */
 .background-elements {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
