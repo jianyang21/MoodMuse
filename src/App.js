@@ -10,6 +10,7 @@ import WritingPage from "./WritingPage";
 import DiaryPage from "./DiaryPage";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
+import { AuthProvider, useAuth } from "./AuthContext";
 import "./App.css";
 
 // Using placeholder images for now
@@ -20,8 +21,14 @@ const moodMuseLogo =
 
 function AppContent() {
   const navigate = useNavigate();
+  const { user, isAuthenticated, logout } = useAuth();
+
   const handleLogin = () => navigate("/login");
   const handleSignup = () => navigate("/signup");
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
 
   return (
     <div
@@ -56,12 +63,25 @@ function AppContent() {
       </ul>
 
       <div className="buttons">
-        <button className="newbutton" onClick={handleLogin}>
-          Log In
-        </button>
-        <button className="signup" onClick={handleSignup}>
-          Sign Up
-        </button>
+        {isAuthenticated ? (
+          <div className="user-section">
+            <span className="welcome-user">
+              Welcome, {user?.firstName || user?.name}!
+            </span>
+            <button className="logout-button" onClick={handleLogout}>
+              Log Out
+            </button>
+          </div>
+        ) : (
+          <>
+            <button className="newbutton" onClick={handleLogin}>
+              Log In
+            </button>
+            <button className="signup" onClick={handleSignup}>
+              Sign Up
+            </button>
+          </>
+        )}
       </div>
 
       <Routes>
@@ -71,7 +91,11 @@ function AppContent() {
           path="/"
           element={
             <div className="welcome">
-              <h1>Welcome back!</h1>
+              <h1>
+                {isAuthenticated
+                  ? `Welcome back, ${user?.firstName || user?.name}!`
+                  : "Welcome back!"}
+              </h1>
               <p>How are you feeling today?</p>
               <div className="mood-buttons">
                 <button className="happy">😊 Happy</button>
@@ -88,13 +112,15 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/*" element={<AppContent />} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/*" element={<AppContent />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
