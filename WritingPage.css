@@ -52,3 +52,41 @@ textarea::placeholder {
 .post-button:hover {
   opacity: 0.8;
 }
+
+.status-message {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .writing-page {
+    padding: 20px;
+  }
+
+  .writing-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .writing-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  textarea {
+    height: 250px;
+    font-size: 14px;
+  }
+
+  .post-button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
