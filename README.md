@@ -4,7 +4,7 @@ MoodMuse is a web application designed to help users track their mood and expres
 
 ---
 
-## 🛠️ Built With
+##  Built With
 
 - **MongoDB** – For storing mood entries and user data
 - **Express.js** – Backend framework for handling APIs and routing
@@ -13,7 +13,7 @@ MoodMuse is a web application designed to help users track their mood and expres
 
 ---
 
-## ✨ Features
+##  Features
 
 - ✍️ **Online Mood Journal** – Write and save daily or momentary thoughts
 - 😊 **Mood Tracker** – Log your current mood with emotion tags or emojis
@@ -24,7 +24,7 @@ MoodMuse is a web application designed to help users track their mood and expres
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
