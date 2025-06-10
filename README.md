@@ -1,4 +1,4 @@
-# MoodMuse 😌📔
+# MoodMuse 
 
 MoodMuse is a web application designed to help users track their mood and express their feelings through an online journal. Whether you're feeling happy, sad, anxious, or excited, MoodMuse provides a safe and personal space to log your emotions, reflect on your thoughts, and keep track of your mental wellness over time.
 
