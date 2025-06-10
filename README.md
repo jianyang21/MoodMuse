@@ -34,10 +34,3 @@ Ensure you have the following installed:
 - MongoDB
 - npm or yarn
 
-### Installation
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/jingyang21/moodmuse.git
-   cd moodmuse
