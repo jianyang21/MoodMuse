@@ -4,13 +4,15 @@ A React-based web application for journaling and mood tracking.
 
 ## Features
 
+- **🎭 Animated Homepage**: Beautiful GIF-like CSS animations with breathing circles, floating particles, and interactive elements
 - **🔐 Authentication**: Beautiful login and signup pages with form validation
 - **✍️ Writing Page**: Create and save personal journal entries
 - **📖 Diary Page**: View all your saved entries with timestamps
-- **😊 Mood Tracking**: Interactive mood selection on the homepage
+- **😊 Interactive Mood Tracking**: Animated mood buttons with click feedback that save daily mood and navigate to writing
 - **👤 User Management**: Personalized welcome messages and user sessions
-- **📱 Responsive Design**: Works on both desktop and mobile devices
-- **💾 Local Storage**: Entries and user data saved locally in your browser
+- **✨ Rich Animations**: Breathing effects, floating particles, shimmer effects, and button interactions
+- **📱 Responsive Design**: Works perfectly on both desktop and mobile devices
+- **💾 Local Storage**: Entries, user data, and daily moods saved locally in your browser
 
 ## Fixed Issues
 
@@ -51,6 +53,15 @@ A React-based web application for journaling and mood tracking.
 - **Diary**: View all your saved entries
 - **Login**: User authentication with email/password
 - **Sign Up**: New user registration with validation
+
+## Animation Features
+
+- **🌬️ Breathing Circle**: Central meditation-inspired breathing animation
+- **✨ Floating Particles**: Six animated emoji particles (✨🌙💫🌟☁️🦋) floating around the centerpiece
+- **🔄 Rotating Rings**: Dual rotating gradient rings for visual depth
+- **💫 Shimmer Effects**: Subtle light shimmer across the welcome content
+- **🎯 Interactive Buttons**: Mood buttons with hover, press, and wiggle animations
+- **📱 Responsive Animations**: All animations scale beautifully on mobile devices
 
 ## Authentication Features
 
