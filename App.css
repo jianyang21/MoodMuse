@@ -1,0 +1,141 @@
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    background: #0B163C;         
+    padding: 15px 0;
+    width: 100%;                 
+    position: fixed;             
+    top: 0;
+    left: 0;
+    margin-top: 0; 
+    z-index: 1000;
+}
+
+/* Navbar items */
+li {
+    margin: 0 25px;
+}
+
+li a {
+    text-decoration: none;
+    color: #e6e8e9;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+li a:hover {
+    opacity: 0.6;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Push content below navbar */
+body {
+    margin-top: 80px; /* adds space so content isn't hidden behind navbar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e6f7ff, #f2fcfe);
+    color: #0B163C;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+/* Main Title */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px auto;
+    color: #0B163C;
+}
+
+/* Intro Text */
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Mood Container */
+.container1 {
+    background: #75c0d2;
+    border-radius: 20px;
+    padding: 25px;
+    width: 700px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.container1:hover {
+    transform: scale(1.05);
+}
+
+/* Container Heading */
+.container1 h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+/* Container Paragraph */
+.container1 p {
+    margin: 10px 0;
+    color: #0B163C;
+}
+
+/* Mood Textarea */
+textarea {
+    width: 95%;
+    height: 150px;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 16px;
+    outline: none;
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgba(255, 255, 255, 0.6);   /* semi-transparent glass effect */
+    backdrop-filter: blur(8px);             /* frosted glass blur */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    color: #0B163C;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover & Focus Effects */
+textarea:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: scale(1.02);
+}
+
+textarea:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 18px rgba(79, 172, 254, 0.6);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.post{
+    background-color: rgba(0, 0, 0, 0.188);
+    color: white;
+    height: 50px;
+    width: 100px;
+    border-radius: 50px;
+    font-size: medium;
+    font-weight: 500;
+    margin-left: 550px;
+    border-color: rgb(92, 102, 102);
+}
+
+.post:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}

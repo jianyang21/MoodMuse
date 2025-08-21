@@ -1,0 +1,68 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #dbe2f7);
+    color: #0B163C;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 40px auto;
+    color: #1a2b6d;
+    letter-spacing: 1px;
+}
+
+/* Container for entries */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Entry cards */
+.entry1, .entry2 {
+    background: white;
+    width: 70%;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.entry1:hover, .entry2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Text inside entries */
+.entry1 p, .entry2 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+/* Add subtle border on top */
+.entry1::before, .entry2::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    border-radius: 5px;
+    margin: 0 auto 15px auto;
+    background: linear-gradient(90deg, #5b7fff, #3c54d6);
+}
+
